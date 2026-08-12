@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harrow High School — Student Portal</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f5f8f7;color:#10231f}
+button,select{font:inherit}.app{min-height:100vh;display:flex}.sidebar{width:245px;background:#063f35;color:#fff;padding:24px 14px;position:fixed;inset:0 auto 0 0}.brand{padding:0 12px 25px;font-weight:800;font-size:17px}.brand small{display:block;font-weight:500;opacity:.7;margin-top:4px}nav button{width:100%;border:0;background:transparent;color:#d9ebe6;text-align:left;padding:13px 12px;border-radius:9px;margin:3px 0;cursor:pointer;font-weight:600}nav button.active,nav button:hover{background:#0b6757;color:#fff}.main{margin-left:245px;width:calc(100% - 245px);padding:34px 42px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.welcome h1{font-size:30px;margin:0 0 5px}.muted{color:#687872}.user{display:flex;align-items:center;gap:10px}.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#075846;color:#fff;font-weight:800}.page{display:block}.hidden{display:none!important}.hero{display:grid;grid-template-columns:1fr 1.7fr;gap:20px}.card{background:#fff;border:1px solid #e4ebe8;border-radius:15px;padding:22px;box-shadow:0 4px 18px #12331a08}.grade-big{font-size:48px;font-weight:850;color:#075846;margin:8px 0}.percent{font-size:20px;font-weight:700}.bar{height:10px;background:#e8efec;border-radius:99px;overflow:hidden;margin-top:18px}.bar span{display:block;height:100%;width:78%;background:#075846}.mini-chart{height:125px;display:flex;align-items:end;gap:14px;padding:10px}.mini-chart i{display:block;width:32px;background:#8db9ae;border-radius:7px 7px 0 0}.mini-chart i:nth-child(1){height:45%}.mini-chart i:nth-child(2){height:60%}.mini-chart i:nth-child(3){height:53%}.mini-chart i:nth-child(4){height:74%}.mini-chart i:nth-child(5){height:82%}.mini-chart i:nth-child(6){height:92%}.section{margin-top:22px}.section-title,.row{display:flex;justify-content:space-between;align-items:center}.quick{cursor:pointer}.pill{display:inline-block;background:#e8f5f0;color:#075846;border-radius:99px;padding:5px 9px;font-size:12px;font-weight:700}.page-title{font-size:30px}.select{padding:10px 12px;border:1px solid #e4ebe8;border-radius:9px;background:#fff}.table{width:100%;border-collapse:collapse;margin-top:15px}.table th{background:#075846;color:#fff;text-align:left;padding:13px}.table td{padding:15px 13px;border-bottom:1px solid #e4ebe8}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.value{font-size:28px;font-weight:850;color:#075846;margin-top:7px}.info{padding:13px 0;border-bottom:1px solid #e4ebe8}.info:last-child{border:0}.info b{display:block;font-size:13px;color:#687872;margin-bottom:4px}
+@media(max-width:800px){.sidebar{width:76px}.brand{font-size:0}.brand small{display:none}nav button{font-size:0;text-align:center}.main{margin-left:76px;width:calc(100% - 76px);padding:24px 16px}.hero,.summary{grid-template-columns:1fr}.table{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="brand">🎓 HARROW HIGH SCHOOL<small>Student Portal</small></div>
+<nav>
+<button class="active" data-page="dashboard">⌂ &nbsp; Dashboard</button>
+<button data-page="grades">▥ &nbsp; Grades / Report Card</button>
+<button data-page="account">♙ &nbsp; Account</button>
+<button data-page="settings">⚙ &nbsp; Settings</button>
+</nav>
+</aside>
+<main class="main">
+<div class="top"><div class="welcome"><h1 id="heading">Welcome back, Zaid</h1><div class="muted">Student ID: 2026-001</div></div><div class="user"><div class="avatar">ZZ</div><strong>Zaid Zerhouani</strong></div></div>
+
+<section id="dashboard" class="page">
+<div class="hero">
+<div class="card"><div class="muted">Current Overall Grade</div><div class="grade-big">B+</div><div class="percent">78%</div><div class="muted">Above class average</div><div class="bar"><span></span></div></div>
+<div class="card"><div class="section-title"><strong>Performance overview</strong><span class="pill">Above Average</span></div><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="muted">Academic year 2025–2026</div></div>
+</div>
+<div class="section card quick" data-page-jump="grades"><div class="section-title"><h2>Grades / Report Card</h2><span>View →</span></div><p class="muted">View your current UK-style grades and overall performance.</p></div>
+</section>
+
+<section id="grades" class="page hidden">
+<div class="row"><h1 class="page-title">Grades / Report Card</h1><select class="select"><option>2025 – 2026</option></select></div>
+<div class="section card"><table class="table"><thead><tr><th>Subject</th><th>Grade</th><th>Percentage</th><th>Class Average</th><th>Performance</th></tr></thead><tbody>
+<tr><td>Maths</td><td><strong>A-</strong></td><td>81%</td><td>C+ (68%)</td><td><span class="pill">Above Average</span></td></tr>
+<tr><td>Science</td><td><strong>B+</strong></td><td>77%</td><td>C (64%)</td><td><span class="pill">Above Average</span></td></tr>
+<tr><td>Chemistry</td><td><strong>B</strong></td><td>72%</td><td>C (62%)</td><td><span class="pill">Above Average</span></td></tr>
+</tbody></table></div>
+<div class="section"><h2>Overall Summary</h2><div class="summary">
+<div class="card"><div class="muted">Overall Average Grade</div><div class="value">B</div><strong>75%</strong></div>
+<div class="card"><div class="muted">Class Average</div><div class="value">C</div><strong>65%</strong></div>
+<div class="card"><div class="muted">Your Position in Class</div><div class="value">9 / 31</div><strong>Top 30%</strong></div>
+</div></div>
+<div class="section card muted">ⓘ Grades are updated regularly. Please check back for the latest results.</div>
+</section>
+
+<section id="account" class="page hidden"><h1 class="page-title">Account</h1><div class="section card"><div class="info"><b>Full name</b>Zaid Zerhouani</div><div class="info"><b>Student ID</b>2026-001</div><div class="info"><b>Email</b>zaidzerhouani5@gmail.com</div><div class="info"><b>School</b>Harrow High School</div></div></section>
+<section id="settings" class="page hidden"><h1 class="page-title">Settings</h1><div class="section card"><div class="info"><b>Notifications</b>Grades and report card updates enabled</div><div class="info"><b>Language</b>English (UK)</div><div class="info"><b>Theme</b>Light</div></div></section>
+</main></div>
+<script>
+(function(){
+  function showPage(name){
+    document.querySelectorAll('.page').forEach(function(p){p.classList.add('hidden')});
+    var target=document.getElementById(name);
+    if(!target)return;
+    target.classList.remove('hidden');
+    document.querySelectorAll('nav button').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-page')===name)});
+    var titles={dashboard:'Welcome back, Zaid',grades:'Grades / Report Card',account:'Account',settings:'Settings'};
+    document.getElementById('heading').textContent=titles[name]||'Welcome back, Zaid';
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('nav button').forEach(function(b){
+    b.addEventListener('click',function(){showPage(b.getAttribute('data-page'))});
+  });
+  document.querySelectorAll('[data-page-jump]').forEach(function(b){
+    b.addEventListener('click',function(){showPage(b.getAttribute('data-page-jump'))});
+  });
+  showPage('dashboard');
+})();
+</script>
+</body>
+</html>
